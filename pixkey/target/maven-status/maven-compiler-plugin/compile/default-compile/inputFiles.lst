@@ -1,0 +1,6 @@
+/home/rodnunes/workspace/treino/rodrigo/spring/demo/src/main/java/com/pixcrud/demo/DemoApplication.java
+/home/rodnunes/workspace/treino/rodrigo/spring/demo/src/main/java/com/pixcrud/demo/application/port/PixKeyRepository.java
+/home/rodnunes/workspace/treino/rodrigo/spring/demo/src/main/java/com/pixcrud/demo/application/service/PixKeyService.java
+/home/rodnunes/workspace/treino/rodrigo/spring/demo/src/main/java/com/pixcrud/demo/domain/model/PixKey.java
+/home/rodnunes/workspace/treino/rodrigo/spring/demo/src/main/java/com/pixcrud/demo/infrastructure/controller/PixKeyController.java
+/home/rodnunes/workspace/treino/rodrigo/spring/demo/src/main/java/com/pixcrud/demo/infrastructure/repository/JpaPixKeyRepository.java
