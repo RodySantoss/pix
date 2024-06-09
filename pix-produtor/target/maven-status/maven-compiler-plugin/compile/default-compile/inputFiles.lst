@@ -1,0 +1,9 @@
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/dto/PixDTO.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/service/PixService.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/model/Pix.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/controller/PixController.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/model/Key.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/PixApplication.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/repository/PixRepository.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/dto/PixStatus.java
+/home/rodnunes/workspace/treino/rodrigo/spring/pix/pix-produtor/src/main/java/com/pix/config/ProducerKafkaConfig.java

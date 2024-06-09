@@ -1,0 +1,9 @@
+com/alura/pix/model/Key.class
+com/alura/pix/PixApplication.class
+com/alura/pix/dto/PixStatus.class
+com/alura/pix/controller/PixController.class
+com/alura/pix/service/PixService.class
+com/alura/pix/config/ProducerKafkaConfig.class
+com/alura/pix/model/Pix.class
+com/alura/pix/repository/PixRepository.class
+com/alura/pix/dto/PixDTO.class
