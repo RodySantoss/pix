@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_pix
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pixdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper
+    container_name: zookeeper_pix
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka
+    container_name: kafka_pix
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+#  pix_consumidor:
+#    image: maven:3.8.5-openjdk-17
+#    container_name: pix_consumidor
+#    build:
+#      context: ../pix-consumidor
+#      dockerfile: Dockerfile
+#    command: mvn clean install
+#    ports:
+#      - "8081:8081"
+#    depends_on:
+#      - mysql
+#      - kafka
+#
+#  pix_produtor:
+#    image: maven:3.8.5-openjdk-17
+#    container_name: pix_produtor
+#    build:
+#      context: ../pix-produtor
+#      dockerfile: Dockerfile
+#    command: mvn clean install
+#    ports:
+#      - "8082:8082"
+#    depends_on:
+#      - mysql
+#      - kafka
+
+#  pixkey:
+#    image: maven:3.8.5-openjdk-17
+#    container_name: pixkey
+#    build:
+#      context: ../pixkey
+#      dockerfile: Dockerfile
+#    command: mvn clean install
+##    volumes:
+##      - ./pixkey:/usr/src/app
+#    depends_on:
+#      - mysql
+
+volumes:
+  mysql_data:
